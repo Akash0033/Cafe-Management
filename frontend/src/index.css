@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navIcon {
+    @apply 
+        flex 
+        items-center 
+        justify-center 
+        w-10 
+        h-10 
+        text-gray-100 ;
+}
+
+.iconContainer {
+    @apply 
+        flex 
+        flex-col 
+        items-center 
+        text-center
+        my-3 
+        w-16 
+        h-16 
+        rounded-md
+        hover:bg-gray-800
+        hover:cursor-pointer
+}
+
+.navIconText {
+    @apply 
+        flex 
+        justify-center 
+        items-center 
+        m-0 
+        p-0 
+        text-white 
+        text-[8px]
+}
+
+.iconContainer2 {
+    @apply 
+        flex 
+        items-center 
+        text-center
+        my-3 
+        mx-auto
+        w-44 
+        h-12 
+        rounded-md
+        hover:bg-gray-800
+        hover:cursor-pointer
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.small-nav-cont {
+    @apply 
+        fixed top-0 left-0 z-10 h-full pb-5 bg-gray-900 overflow-y-auto scrollbar-hide
+        transition-all duration-300 ease-in-out
+        w-[70px]
+}
+
+.big-nav-cont {
+    @apply 
+        /* hidden lg:block  */
+        fixed top-0 left-0 z-10 h-full pt-3 bg-gray-900 overflow-y-auto scrollbar-hide
+        transition-all duration-300 ease-in-out
+        w-[208px]
+}
+
+.small-nav-cont.hide {
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.big-nav-cont.hide {
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+@keyframes hero-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.circleImg {
+    animation: hero-spin infinite 20s linear;
+}
