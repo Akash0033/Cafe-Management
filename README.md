@@ -1,70 +1,283 @@
-# Getting Started with Create React App
+CanteenKart 🍽️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CanteenKart is a full-stack web-based application designed to digitize and streamline cafeteria operations in college environments. It enables students to register, order food, recharge accounts online, and avoid cash-based transactions, reducing wait times and improving service efficiency.
 
-## Available Scripts
 
-In the project directory, you can run:
+---
 
-### `npm start`
+📌 Project Objective
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To solve common problems in college canteens such as:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Long queues for ordering and billing
 
-### `npm test`
+Inconvenient cash transactions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Lack of transparency in transactions
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+With CanteenKart, students can preorder food, make online payments, receive SMS alerts for transactions, and track wallet balance with ease.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+🛠 Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Layer	Technology
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Frontend	ReactJS, JavaScript, Tailwind CSS
+Backend	Node.js with ExpressJS
+Database	MySQL
+Others	Axios, dotenv, nodemon, Multer, bcrypt
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🗂️ Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+backend/: ExpressJS API Server
 
-### Code Splitting
+src/: Routes, Controllers
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+config/: DB connection & Middleware
 
-### Analyzing the Bundle Size
+uploads/: Static file handling (e.g. food images)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+frontend/: ReactJS Single Page Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+public/: Static HTML and assets
 
-### Advanced Configuration
+src/: Pages, Components, Hooks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+MenuImages/: Sample images for menu items
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+updated db/: SQL schema and sample data
 
-### `npm run build` fails to minify
+.gitignore: Specifies files/folders ignored by Git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+---
+
+✨ Key Features
+
+Student Registration and Wallet Creation
+
+Menu Category and Item Management (Admin)
+
+Online Wallet Recharge and Manual Recharge
+
+Food Pre-Ordering (Online Booking)
+
+Product Search by Name or Category
+
+Role-based Login: Student, Admin, Staff
+
+Order Management and Status Update
+
+Account Deactivation for graduated students
+
+SMS/Email Notifications for transactions
+
+
+
+---
+
+📥 Installation Guide
+
+1. Clone the Repository
+
+Open a terminal and run the following commands:
+
+git clone https://github.com/Akash0033/Cafe-Management.git
+
+cd CAFE_MANAGEMENT
+
+
+2. Install Prerequisites
+
+Make sure the following are installed:
+
+Node.js version 18 or higher
+
+MySQL Server or XAMPP (recommended)
+
+
+If you don’t have MySQL or phpMyAdmin, download and install XAMPP from: https://www.apachefriends.org/index.html Then start Apache and MySQL from the XAMPP Control Panel.
+
+3. Configure Environment Variables
+
+Create a file named .env inside the backend/ folder and add the following content:
+
+DB_HOST=localhost
+
+DB_USER=root
+
+DB_PASSWORD=your_password
+
+DB_NAME=canteenKartDB
+
+EMAIL=your_email
+
+EMAIL_PASSWORD=your_email_16_digit_password
+
+
+4. Initialize the Database Using phpMyAdmin
+
+1. Open http://localhost/phpmyadmin
+
+
+2. Create a new database named canteenkart_db
+
+
+3. Click on the Import tab
+
+
+4. Choose the schema.sql file from the updated db/ folder and import it
+
+
+5. Optionally, import seed.sql for demo data
+
+
+
+5. Run the Application
+
+For Backend:
+
+Go to the backend folder
+
+Run npm install
+
+Then run npm run serve
+
+
+For Frontend:
+
+Open a new terminal
+
+Navigate to the frontend folder
+
+Run npm install
+
+Then run npm start
+
+
+After both are running, visit http://localhost:3000 to access the application.
+
+
+---
+
+🔒 User Roles
+
+Role	Access Level
+
+Student	Book food, recharge wallet
+Admin	Manage users, menu, recharge
+Staff	View and prepare orders
+
+
+
+---
+
+📦 Modules Overview
+
+Login & Registration: Auth for students/admins
+
+Category: Manage food categories
+
+Items: CRUD for menu items
+
+Online Booking: Place orders via React UI
+
+Recharge: Manual & online wallet top-up
+
+Deactivate: Disable accounts after graduation
+
+Search: Find menu items quickly
+
+Admin Dashboard: Analytics and control panel
+
+
+
+---
+
+📊 Database Tables (Simplified)
+
+Table	Key Columns
+
+users	user_id, username, password, user_type
+students	student_id, name, roll_no, course, deposit
+categories	category_id, category_name
+items	item_id, category_name, item_name, price
+bookings	booking_id, itemname, quantity, serving_time
+recharge	recharge_id, roll_no, recharge_amount, balance
+deactivate	student_id, reg_no, status
+
+
+
+---
+
+🔭 Future Enhancements
+
+Mobile App Integration (React Native)
+
+QR Code-based payment and login
+
+Multi-canteen or branch support
+
+Real-time order tracking for students
+
+Self-service recharge system
+
+
+
+---
+
+🧪 Testing
+
+To run tests, open a terminal and use the following command:
+
+npm run test
+
+
+
+---
+
+📜 License
+
+MIT License – Feel free to use, modify, and contribute.
+
+
+---
+
+🙌 Authors & Acknowledgements
+
+Akash (Lead Developer)
+
+Based on academic project report: "CanteenKart"
+
+Tools used: VS Code, MySQL Workbench, Postman, XAMPP
+
+
+
+---
+
+📚 References
+
+ReactJS – https://reactjs.org
+
+ExpressJS – https://expressjs.com
+
+MySQL – https://www.mysql.com
+
+Tailwind CSS – https://tailwindcss.com
+
+
+
+---
+
+Enjoy smarter canteen management with CanteenKart! 🍕🍹
+
