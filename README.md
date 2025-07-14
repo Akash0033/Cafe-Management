@@ -94,7 +94,7 @@ Open a terminal and run the following commands:
 
 git clone https://github.com/Akash0033/Cafe-Management.git
 
-cd CAFE_MANAGEMENT
+cd Cafe-Management
 
 
 2. Install Prerequisites
