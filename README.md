@@ -255,7 +255,7 @@ MIT License – Feel free to use, modify, and contribute.
 
 🙌 Authors & Acknowledgements
 
-Akash (Lead Developer)
+Joel Akash Lobo (Lead Developer)
 
 Based on academic project report: "CanteenKart"
 
